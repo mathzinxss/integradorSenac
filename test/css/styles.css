@@ -1,0 +1,112 @@
+/* Reset básico para garantir uma aparência consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Cor de fundo clara */
+    color: #333; /* Cor do texto */
+}
+
+/* Cabeçalho */
+header {
+    background: #007BFF; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none; /* Remove a lista padrão */
+    text-align: center; /* Centraliza os itens */
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens em linha */
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilos para as seções */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background: #fff; /* Fundo branco para as seções */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1, h2, h3 {
+    color: #007BFF; /* Cor dos títulos */
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column; /* Organiza os campos em coluna */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+label {
+    margin-bottom: 5px; /* Espaçamento inferior */
+}
+
+input, select, button {
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+button {
+    background-color: #007BFF; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+/* Tabela */
+table {
+    width: 100%; /* Tabela ocupa toda a largura */
+    border-collapse: collapse; /* Remove espaçamento entre as células */
+}
+
+th, td {
+    padding: 10px; /* Espaçamento interno */
+    border-bottom: 1px solid #ddd; /* Linha de separação */
+    text-align: left; /* Alinhamento do texto à esquerda */
+}
+
+th {
+    background-color: #f2f2f2; /* Cor de fundo para cabeçalhos */
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+
+/* Rodapé */
+footer {
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 10px 0;
+    background: #007BFF; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto */
+}

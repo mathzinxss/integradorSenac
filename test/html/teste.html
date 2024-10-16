@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gestão de Finanças Pessoais</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link para o CSS -->
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contas">Contas</a></li>
+                <li><a href="#transacoes">Transações</a></li>
+                <li><a href="#orcamentos">Orçamentos</a></li>
+                <li><a href="#metas">Metas</a></li>
+                <li><a href="#relatorios">Relatórios</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Bem-vindo ao GFinanceiro!</h1>
+        <p>Gerencie suas finanças de forma simples e eficiente.</p>
+        <button>Começar</button>
+    </section>
+    
+    
+
+    <!-- Seção de Cadastro/Log in -->
+    <section id="login">
+        <form action="/login" method="POST">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p><a href="#">Esqueceu sua senha?</a> | <a href="#">Criar uma nova conta</a></p>
+    </section>
+
+    <!-- Seção principal de gerenciamento -->
+    <section id="transacoes">
+        <h2>Transações Recentes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Valor</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>15/10/2024</td>
+                    <td>Salário</td>
+                    <td>Receita</td>
+                    <td>R$ 2.000,00</td>
+                    <td>R</td>
+                </tr>
+                <tr>
+                    <td>14/10/2024</td>
+                    <td>Supermercado</td>
+                    <td>Despesas</td>
+                    <td>R$ 200,00</td>
+                    <td>D</td>
+                </tr>
+                <!-- Adicione mais transações conforme necessário -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="orcamentos">
+        <h2>Meus Orçamentos</h2>
+        <div class="orcamento">
+            <h3>Orçamento Mensal</h3>
+            <p>Valor: R$ 1.500,00</p>
+            <p>Gastos: R$ 800,00</p>
+            <p>Sobra: R$ 700,00</p>
+        </div>
+        <!-- Adicione mais orçamentos conforme necessário -->
+    </section>
+
+    <section id="metas">
+        <h2>Minhas Metas</h2>
+        <div class="meta">
+            <h3>Viajar para a praia</h3>
+            <p>Valor da Meta: R$ 3.000,00</p>
+            <p>Valor Atual: R$ 1.000,00</p>
+            <p>Faltam: R$ 2.000,00</p>
+        </div>
+        <!-- Adicione mais metas conforme necessário -->
+    </section>
+    
+    <section id="adicionar-transacao">
+        <h2>Adicionar Transação</h2>
+        <form>
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" required>
+    
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" required>
+    
+            <label for="categoria">Categoria:</label>
+            <select id="categoria">
+                <option value="receita">Receita</option>
+                <option value="despesa">Despesa</option>
+            </select>
+    
+            <button type="submit">Adicionar</button>
+        </form>
+    </section>
+    
+    
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 GFinanceiro. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#politica">Política de Privacidade</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

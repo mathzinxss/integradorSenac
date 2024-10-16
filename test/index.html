@@ -1,13 +1,150 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=[device-width], initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gestão de Finanças Pessoais</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
 </head>
 <body>
-    <h1>teste</h1>
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#home">GFinanceiro</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contas">Contas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#transacoes">Transações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#orcamentos">Orçamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#metas">Metas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#relatorios">Relatórios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="text-center my-5">
+        <h1>Bem-vindo ao GFinanceiro!</h1>
+        <p>Gerencie suas finanças de forma simples e eficiente.</p>
+        <a class="btn btn-primary" href="#login">Começar</a>
+    </section>
+
+    <!-- Seção de Cadastro/Log in -->
+    <section id="login" class="container my-5">
+        <h2 class="text-center">Login</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" id="senha" name="senha" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Entrar</button>
+        </form>
+        <p class="text-center"><a href="#">Esqueceu sua senha?</a> | <a href="#">Criar uma nova conta</a></p>
+    </section>
+
+    <!-- Seção principal de gerenciamento -->
+    <section id="transacoes" class="container my-5">
+        <h2>Transações Recentes</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Valor</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>15/10/2024</td>
+                    <td>Salário</td>
+                    <td>Receita</td>
+                    <td>R$ 2.000,00</td>
+                    <td>R</td>
+                </tr>
+                <tr>
+                    <td>14/10/2024</td>
+                    <td>Supermercado</td>
+                    <td>Despesas</td>
+                    <td>R$ 200,00</td>
+                    <td>D</td>
+                </tr>
+                <!-- Adicione mais transações conforme necessário -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="orcamentos" class="container my-5">
+        <h2>Meus Orçamentos</h2>
+        <div class="card">
+            <div class="card-body">
+                <h3>Orçamento Mensal</h3>
+                <p>Valor: R$ 1.500,00</p>
+                <p>Gastos: R$ 800,00</p>
+                <p>Sobra: R$ 700,00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="metas" class="container my-5">
+        <h2>Minhas Metas</h2>
+        <div class="card">
+            <div class="card-body">
+                <h3>Viajar para a praia</h3>
+                <p>Valor da Meta: R$ 3.000,00</p>
+                <p>Valor Atual: R$ 1.000,00</p>
+                <p>Faltam: R$ 2.000,00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="adicionar-transacao" class="container my-5">
+        <h2>Adicionar Transação</h2>
+        <form>
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <input type="text" class="form-control" id="descricao" required>
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor:</label>
+                <input type="number" class="form-control" id="valor" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoria:</label>
+                <select class="form-control" id="categoria">
+                    <option value="receita">Receita</option>
+                    <option value="despesa">Despesa</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 GFinanceiro. Todos os direitos reservados.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#sobre" class="text-white">Sobre nós</a></li>
+            <li class="list-inline-item"><a href="#contato" class="text-white">Contato</a></li>
+            <li class="list-inline-item"><a href="#politica" class="text-white">Política de Privacidade</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
