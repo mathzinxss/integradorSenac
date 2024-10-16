@@ -1,5 +1,8 @@
+USE bancoIntegrador
+GO
+
 -- Criar tabela Usuarios
-CREATE TABLE Usuarios (
+CREATE TABLE usuarios (
     id_usuario INT PRIMARY KEY IDENTITY(1,1),
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100)  UNIQUE NOT NULL,
@@ -8,7 +11,7 @@ CREATE TABLE Usuarios (
 );
 
 -- Criar tabela Contas
-CREATE TABLE Contas (
+CREATE TABLE contas (
     id_contas INT PRIMARY KEY IDENTITY(1,1),
     id_usuario INT,
     nome_conta VARCHAR(100) NOT NULL,
@@ -30,3 +33,4 @@ CREATE TABLE Transacoes (
 );
 
 -- Criar tabela orçamentos
+Cr
